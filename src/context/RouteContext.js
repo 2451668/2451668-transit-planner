@@ -24,7 +24,7 @@ export const RouteProvider = ({ children }) => {
     </RouteContext.Provider>
   );
 };
-// exporting the provider and context can be used in other comps cross-app
+// exporting the provider and context to be used in other comps cross-app
 
 /* references and learning */
 

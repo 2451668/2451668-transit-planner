@@ -1,24 +1,20 @@
-/* page to manage shopping cart of selected routes. Will features functionality to view all added routes, change ticket amount, remove a route, and proceed to checkout. */
-
-// TicketPurchase.js
-// This component allows users to view their cart, remove routes, and proceed to checkout.
+/* page to manage shopping cart of selected routes. Will feature functionality to view all added routes, change ticket amount, remove a route, and proceed to checkout. */
 
 import React, { useContext } from 'react';
 import { RouteContext } from '../context/RouteContext';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom'; 
 import './TicketPurchase.css';  // will be using its own styling
 
 const TicketPurchase = () => {
     const { selectedRoutes, removeRouteFromCart } = useContext(RouteContext); // accessing context for cart data and functions
+    const navigate = useNavigate(); 
 
     // function to handle the checkout process
     const handleCheckout = () => {
         alert("Processing your purchase...");
-        navigate('/confirmation'); 
+        navigate('/confirmation');  // navigate to go to the confirmation page
         alert("Thank you for your purchase!");
     };
-
-    
 
     return (
         <div>

@@ -14,7 +14,7 @@ export const RouteProvider = ({ children }) => {
         { id: 3, name: 'Route 3', description: 'This is the description for Route 3.', detailed: 'Detailed description for Route 3', price: '$15' }
     ]);
 
-    // State for managing the routes selected by the user
+    // state for managing selected routes 
     const [selectedRoutes, setSelectedRoutes] = useState([]);
 
     // function to add a route to cart

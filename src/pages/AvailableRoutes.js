@@ -1,6 +1,7 @@
 /* component for showing all available transit routes that can be accessed. Each route rendered will be from the RouteCard component; interacting with it will lead to the Route Information page thereafter.*/
 
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
+import { RouteContext } from '../context/RouteContext';
 import { Link } from 'react-router-dom';
 import './AvailableRoutes.css';  // will be using its own styling
 

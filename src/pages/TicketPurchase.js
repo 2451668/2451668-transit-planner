@@ -5,6 +5,7 @@
 
 import React, { useContext } from 'react';
 import { RouteContext } from '../context/RouteContext';
+import { useNavigate } from 'react-router-dom';
 import './TicketPurchase.css';  // will be using its own styling
 
 const TicketPurchase = () => {
@@ -12,8 +13,12 @@ const TicketPurchase = () => {
 
     // function to handle the checkout process
     const handleCheckout = () => {
+        alert("Processing your purchase...");
+        navigate('/confirmation'); 
         alert("Thank you for your purchase!");
     };
+
+    
 
     return (
         <div>

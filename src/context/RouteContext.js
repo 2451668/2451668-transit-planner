@@ -7,22 +7,32 @@ export const RouteContext = createContext();
 
 // provider component encapsulates state logic and will provide in other comps
 export const RouteProvider = ({ children }) => {
-  const [routes, setRoutes] = useState([]); // manage array of available routes
-  const [selectedRoutes, setSelectedRoutes] = useState([]); // manage selected routes
+    // state for managing array of available routes
+    const [routes, setRoutes] = useState([
+        { id: 1, name: 'Route 1', description: 'This is the description for Route 1.', detailed: 'Detailed description for Route 1', price: '$20' },
+        { id: 2, name: 'Route 2', description: 'This is the description for Route 2.', detailed: 'Detailed description for Route 2', price: '$25' },
+        { id: 3, name: 'Route 3', description: 'This is the description for Route 3.', detailed: 'Detailed description for Route 3', price: '$15' }
+    ]);
 
-  const addRouteToCart = (route) => { // add routes to cart
-    setSelectedRoutes([...selectedRoutes, route]);
-  };
+    // State for managing the routes selected by the user
+    const [selectedRoutes, setSelectedRoutes] = useState([]);
 
-  const removeRouteFromCart = (routeId) => { // remove a route from cart ( based on ID)
-    setSelectedRoutes(selectedRoutes.filter(r => r.id !== routeId));
-  };
+    // function to add a route to cart
+    const addRouteToCart = (route) => {
+        setSelectedRoutes([...selectedRoutes, route]);
+    };
 
-  return ( // provider passes these states down to the children 
-    <RouteContext.Provider value={{ routes, setRoutes, selectedRoutes, addRouteToCart, removeRouteFromCart }}>
-      {children}
-    </RouteContext.Provider>
-  );
+    // function to remove a route from cart based on ID
+    const removeRouteFromCart = (routeId) => {
+        setSelectedRoutes(selectedRoutes.filter(route => route.id !== routeId));
+    };
+
+    // provider pass down states to children
+    return (
+        <RouteContext.Provider value={{ routes, setRoutes, selectedRoutes, addRouteToCart, removeRouteFromCart }}>
+            {children}
+        </RouteContext.Provider>
+    );
 };
 // exporting the provider and context to be used in other comps cross-app
 

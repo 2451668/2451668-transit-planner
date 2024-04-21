@@ -1,0 +1,27 @@
+/* styling for route info cards */
+.route-info {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-top: 20px;
+}
+
+.route-info h1 {
+    color: #333;
+}
+
+.route-info p {
+    color: #666;
+    font-size: 16px;
+}
+
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #5c67f2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

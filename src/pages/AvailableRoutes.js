@@ -5,12 +5,7 @@ import { Link } from 'react-router-dom';
 import './AvailableRoutes.css';  // will be using its own styling
 
 const AvailableRoutes = () => {
-    // mock data for routes
-    const [routes] = useState([
-        { id: 1, name: 'Route 1', description: 'This is the description for Route 1.' },
-        { id: 2, name: 'Route 2', description: 'This is the description for Route 2.' },
-        { id: 3, name: 'Route 3', description: 'This is the description for Route 3.' }
-    ]);
+    const { routes } = useContext(RouteContext); // uses shared route data from context
 
     return (
         <div>
@@ -18,9 +13,7 @@ const AvailableRoutes = () => {
             <ul>
                 {routes.map(route => (
                     <li key={route.id}>
-                        <Link to={`/route/${route.id}`}>
-                            {route.name}: {route.description}
-                        </Link>
+                        <Link to={`/route/${route.id}`}>{route.name}: {route.description}</Link>
                     </li>
                 ))}
             </ul>

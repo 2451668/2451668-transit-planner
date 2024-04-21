@@ -1,0 +1,1 @@
+/* component for showing detailed info about one route. useParams hook to fetch route ID for any given route. Will feature an option to add to cart.*/

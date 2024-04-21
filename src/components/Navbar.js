@@ -1,0 +1,1 @@
+/* component for rendering the navigation bar for the app. will feature react router dom to link and handle routing across.*/

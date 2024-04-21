@@ -1,0 +1,1 @@
+/* component for showing info about only one transit route. Will feature on the Available Routes page to render one route as a card to be interacted with later.*/

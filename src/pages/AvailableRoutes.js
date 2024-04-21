@@ -1,0 +1,1 @@
+/* component for showing all available transit routes that can be accessed. Each route rendered will be from the RouteCard component; interacting with it will lead to the Route Information page thereafter.*/

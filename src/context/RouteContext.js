@@ -1,0 +1,1 @@
+/* file will define the context for global state managing cross-app. Managing cart will be handled here with useContext.*/

@@ -9,9 +9,10 @@ export const RouteContext = createContext();
 export const RouteProvider = ({ children }) => {
     // state for managing array of available routes
     const [routes, setRoutes] = useState([
-        { id: 1, name: 'Route 1', description: 'This is the description for Route 1.', detailed: 'Detailed description for Route 1', price: '$20' },
-        { id: 2, name: 'Route 2', description: 'This is the description for Route 2.', detailed: 'Detailed description for Route 2', price: '$25' },
-        { id: 3, name: 'Route 3', description: 'This is the description for Route 3.', detailed: 'Detailed description for Route 3', price: '$15' }
+        { id: 'route-1', title: 'Downtown Express', duration: '25 mins', stops: 5, price: 245.5, description: 'The quickest way to the heart of the city, with minimal stops.' },
+        { id: 'route-2', title: 'Scenic Coastal Line', duration: '55 mins', stops: 8, price: 255.75, description: 'Enjoy breathtaking views of the coastline as you travel.' },
+        { id: 'route-3', title: 'Suburban Shuttle', duration: '45 mins', stops: 6, price: 99.0, description: 'Connects the suburbs with downtown, running every half hour.' },
+        { id: 'route-4', title: 'Night Owl', duration: '30 mins', stops: 4, price: 56.65, description: 'Operates after midnight, serving all major nightlife districts.' }
     ]);
 
     // state for managing selected routes 
@@ -41,5 +42,6 @@ export const RouteProvider = ({ children }) => {
 // https://react.dev/reference/react/useContext
 // https://react.dev/reference/react/createContext
 // https://react.dev/reference/react/useState
+// https://www.openai.com
 /* https://borstch.com/blog/development/context-in-react-18-simplifying-data-flow-with-usecontext */
 /* https://medium.com/@JeffyJeff/a-step-by-step-guide-to-managing-state-with-react-18-and-context-api-5962f90ef1d5#:~:text=The%20React%20Context%20API%20is,and%20keep%20track%20of%20changes. */

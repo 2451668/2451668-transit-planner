@@ -45,3 +45,4 @@ export default App; // exported for use in index.js
 // https://www.geeksforgeeks.org/reactjs-router/
 // https://luqmanshaban.medium.com/react-router-a-step-by-step-guide-4c5ec964d2e9
 // https://hygraph.com/blog/routing-in-react
+// https://www.openai.com

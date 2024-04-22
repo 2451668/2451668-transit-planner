@@ -13,12 +13,16 @@ const RouteInfo = () => {
 
     return (
         <div className="route-info">
-            <h1>{route.name}</h1>
-            <p>{route.detailed}</p>
-            <p>Ticket Price: {route.price}</p>
-            <button onClick={() => navigate('/purchase')}>Purchase Ticket</button>
-            <button onClick={() => navigate('/')}>Back to Routes</button>
-        </div>
+        <h1>{route.title}</h1>
+        <p>{route.description}</p>
+        <p>Duration: {route.duration}</p>
+        <p>Number of Stops: {route.stops}</p>
+        <p>Ticket Price: ${route.price}</p>
+        <button onClick={() => {
+            navigate('/purchase');
+        }}>Purchase Ticket</button>
+        <button onClick={() => navigate('/')}>Back to Routes</button>
+    </div>
     );
 }
 

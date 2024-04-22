@@ -44,3 +44,4 @@ export default TicketPurchase;
 // https://www.w3schools.com/react/react_router.asp#gsc.tab=0&gsc.q=usestate
 // https://commercejs.com/docs/community/creating-a-cart-with-react-js/
 // https://commercejs.com/docs/guides/cart-react/
+// https://www.openai.com
